@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="05ef1cb8-944f-4d47-a4c9-153bfe954468" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/about_us.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/employment.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gallery.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/menu.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reservations.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/designer.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +40,7 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Ian/OneDrive/Documents/hysperian.github.io",
+    "last_opened_file_path": "C:/Users/Ian/OneDrive/Documents/ian.github.io",
     "settings.editor.selected.configurable": "vcs.Git"
   }
 }]]></component>
@@ -56,21 +49,6 @@
       <recent name="C:\Users\Ian\OneDrive\Documents\hysperian.github.io" />
       <recent name="C:\Users\Ian\OneDrive\Documents\hysperian.github.io\.idea" />
     </key>
-  </component>
-  <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="hysperian.github.io" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="hysperian.github.io" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
