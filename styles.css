@@ -61,11 +61,8 @@ font-size: 25px;
 }
 
 .hours__list {
-    padding: 0;
-}
-
-.hours__list li {
     margin: 5px 0;
+    padding: 0;
 }
 
 .hours__title {
