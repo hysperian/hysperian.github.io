@@ -1,57 +1,64 @@
+/* Global reset - ensures consistent margins, padding, list styling, and includes box-sizing for predictable layouts */
 * {
     margin: 0;
     padding: 0;
     list-style: none;
     text-decoration: none;
-    
+    box-sizing: border-box;
 }
 
+/* Navbar - full width, centered content, flexbox for layout */
 .navbar {
-width: 100%;
-height: 200px;
-display:flex;
-justify-content: center;
-align-items: center;
-background-color: rgb(114, 20, 20);
-
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(114, 20, 20);
 }
 
+/* Navbar container - flex column layout for stacking the logo and menu */
 .navbar__container {
-width: 100%;
-height:100%;
-margin: 0 auto;
-display: flex;
-flex-direction: column;
-justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
+/* Navbar logo - centered horizontally, uses flex-grow to fill available space */
 #navbar__logo {
-color: white;
-width: 12%;
-display: flex;
-margin: 50px auto;
-justify-content: center;
-align-items: center;
-font-size: 36px;
-flex-grow: 1;
+    color: white;
+    width: 12%;
+    display: flex;
+    margin: 50px auto;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    flex-grow: 1;
 }
 
+/* Navbar menu - full width menu, centered items */
 .navbar__menu {
-justify-content: center;
-width: 100%;
-display: flex;
-padding: 10px;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    padding: 10px;
 }
 
+/* Individual navbar items with spacing */
 .navbar__item {
-margin: 0 100px;
+    margin: 0 100px;
 }
 
+/* Navbar links - text color and font size */
 .navbar__links {
-color: rgb(206, 206, 206);
-font-size: 25px;
+    color: rgb(206, 206, 206);
+    font-size: 25px;
 }
 
+/* Footer - full width, centered text */
 .footer {
     width: 100%;
     background-color: #333;
@@ -60,12 +67,14 @@ font-size: 25px;
     padding: 10px 0;
 }
 
+/* Hours section list - resets margin and padding for list items */
 .hours__list {
     margin: 5px 0;
     padding: 0;
 }
 
+/* Hours section title - font size and margin for spacing */
 .hours__title {
-    font-size: 24px;  /* Adjust the title font size */
+    font-size: 24px;
     margin: 10px 0;
 }
