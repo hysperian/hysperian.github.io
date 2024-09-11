@@ -67,14 +67,63 @@
     padding: 10px 0;
 }
 
+.footer {
+    background-color: #333;        /* Dark background for the footer */
+    color: #fff;                   /* White text color for contrast */
+    padding: 20px;                 /* Padding inside the footer */
+    font-family: Arial, sans-serif;/* Set font */
+}
+
+.footer__container {
+    display: flex;                 /* Enable Flexbox layout */
+    justify-content: space-between;/* Ensure both sides take space */
+    max-width: 1200px;             /* Limit the max width */
+    margin: 0 auto;                /* Center the content */
+}
+
+.location__content, .hours__list {
+    margin: 0;
+    padding: 0;
+}
+
+.location__header, .hours__title {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.location__address {
+    font-size: 16px;
+}
+
+.location__map iframe {
+    width: 100%;
+    max-width: 300px;              /* Set a max width for the map */
+    height: 200px;
+    border: none;
+}
+
+/* Hours section */
+.hours__list li {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.hours__list strong {
+    font-weight: bold;
+}
+
+
+
 /* Hours section list - resets margin and padding for list items */
 .hours__list {
     margin: 5px 0;
     padding: 0;
+
 }
 
 /* Hours section title - font size and margin for spacing */
 .hours__title {
     font-size: 24px;
     margin: 10px 0;
+
 }
