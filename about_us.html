@@ -10,20 +10,28 @@
     <!-- Navbar section -->
     <nav class="navbar">
         <div class="navbar__container">
-            <a href="index.html" id="navbar__logo"><strong>IAN'S CHOPHOUSE</strong></a>
+            <!-- Left part of the menu -->
             <ul class="navbar__menu">
-                <!-- Menu items -->
                 <li class="navbar__item">
                     <a href="about_us.html" class="navbar__links">ABOUT US</a>
-                </li>
-                <li class="navbar__item">
-                    <a href="gallery.html" class="navbar__links">GALLERY</a>
                 </li>
                 <li class="navbar__item">
                     <a href="menu.html" class="navbar__links">MENU</a>
                 </li>
                 <li class="navbar__item">
                     <a href="reservations.html" class="navbar__links">RESERVATIONS</a>
+                </li>
+            </ul>
+        
+            <!-- Logo in the center -->
+            <a href="index.html" id="navbar__logo">
+                <img src="images/logo.png" alt="Logo" class="navbar__logo-image">
+            </a>
+        
+            <!-- Right part of the menu -->
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="gallery.html" class="navbar__links">GALLERY</a>
                 </li>
                 <li class="navbar__item">
                     <a href="careers.html" class="navbar__links">CAREERS</a>
@@ -45,16 +53,18 @@
     <!-- Footer with hours of operation and ownership info -->
     <div class="footer">
         <div class="footer__container">
-            <h2 class="location__header">Location</h2>
-            <div class="location__content">
-                <div class="location__address">
-                    <p>123 Cherry Blossom Lane<br>Chesapeake, VA 23320</p>
-                </div>
-                <div class="location__map">
-
+            <!-- Location column -->
+            <div class="footer__column">
+                <h2 class="location__header">Location</h2>
+                <div class="location__content">
+                    <div class="location__address">
+                        <p>123 Cherry Blossom Lane<br>Chesapeake, VA 23320</p>
+                    </div>
                 </div>
             </div>
-            <div>
+    
+            <!-- Hours column -->
+            <div class="footer__column">
                 <h2 class="hours__title">Hours</h2>
                 <ul class="hours__list">
                     <li><strong>Monday:</strong> 10:00AM - 11:00PM</li>
@@ -66,15 +76,16 @@
                     <li><strong>Sunday:</strong> 10:00AM - 11:00PM</li>
                 </ul>
             </div>
-            <div class="newsletter__input">
-                <p>Subscribe to our newsletter 
-                    <input type="email" placeholder="Your email"> 
-                    <input type="submit">
-                </p>
+    
+            <!-- Newsletter column -->
+            <div class="footer__column">
+                <h2 class="subscribe__title">Subscribe to our newsletter</h2>
+                <form>
+                    <input type="email" placeholder="Your email">
+                    <input type="submit" value="Subscribe">
+                </form>
             </div>
         </div>
-        <br>
-        Owned and Operated by <strong>Ian Rafinski</strong>
     </div>
 </body>
 </html>
