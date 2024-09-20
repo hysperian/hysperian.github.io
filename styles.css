@@ -102,7 +102,7 @@ body {
 .hero__image {
     width: 100%;
     object-fit: cover;
-    opacity: .5;
+    opacity: .7;
 }
 
 .hero__logo {
@@ -170,15 +170,29 @@ body {
     width: 30%;
 }
 
+.footer__column form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .footer__column input[type="email"] {
     width: 80%;
-    padding: 5px;
-    margin-bottom: 10px;
+    padding: 10px;
+    margin-bottom: 5px; /* Reduce the space between the email input and the button */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: 'OpenSans-Regular', sans-serif;
+    outline: none;
 }
 
 .footer__column input[type="submit"] {
-    padding: 5px;
-    background-color: white;
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'OpenSans-Regular', sans-serif;
+    margin-top: 0; /* Remove top margin to bring it closer to the input field */
     cursor: pointer;
 }
 
@@ -198,54 +212,97 @@ body {
     margin: 10px;
 }
 
-.footer__column form {
-    margin-top: 10px;
-}
-
 .footer p {
     margin: 20px;
 }
 
+
+
 .reservation__img {
     position: relative; /* Make this relative so that the text can be absolutely positioned within it */
     display: flex;
-    height: 350px;
+    min-height: 900px;
     width: 100%;
+    justify-content: center; /* Horizontally center the content */
+    align-items: center;     /* Vertically center the content */
 }
 
 .reservation__image {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    opacity: 0.5;
+    opacity: 0.7;
     filter: brightness(1.5);
 }
 
-.reservation__header {
+.reservation__main {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     color: white;
-    font-size: 3rem;
+    font-size: 55px;
     font-family: 'CrimsonText-SemiBold', serif;
     text-align: center;
 }
 
-.reservation__box {
-    height: 100%;
-    color: white;
-    border: solid white;
-    width: 97%;
-    text-align: center;
+.banner{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 26px auto;
+    color: #ffffff;
+    padding-bottom: 20px;
 }
 
+.banner p {
+    margin: 20px;
+}
+.card__container{
+    display: flex;
+}
 
-
-    .reservation__title {
-    font-size: 35px;
+.banner h2{
+    padding-bottom: 40px;
+    margin-bottom: 20px;
+}
+.card__content{
+    background: #000000c9;
+    height: 280px;
+    border-radius: 4px;
+}
+.card__content h3{
+    text-align: center;
+    color: #ffffff;
+    padding: 25px 0 10px 0;
+    font-size: 26px;
+    font-weight: 500;
+}
+.form__row{
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+}
+form select, form input{
+    display: block;
+    width: 100%;
+    margin: 15px 12px;
+    padding: 5px;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #eee;
+    font-weight: 300;
+}
+form input[type = text], form input[type = number], form input::placeholder, select{
+    color: #9a9a9a;
+}
+form input[type = submit]{
+    color: #fff;
+    background: #525252;
+    padding: 12px 0;
+    border-radius: 4px;
+    border-color: #525252;
+    cursor: pointer;
+}
+form input[type = submit]:hover{
+    opacity: 0.9;
 }

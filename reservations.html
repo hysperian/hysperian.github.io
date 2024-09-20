@@ -45,17 +45,58 @@
 
     <div class="reservation__img">
         <img src="images/reservations.jpg" alt="Reservation Image" class="reservation__image">
-        <div class="reservation__header">
-            <p>Reservations</p>
+        <div class="reservation__main">
+            <section class = "banner">
+                <p>Call Or Book a Table Online</p>
+                    <div class = "card__content">
+                        <h3>Reservations</h3>
+                        <form>
+                            <div class = "form__row">
+                                <select name = "days">
+                                    <option value = "day-select">Select Day</option>
+                                    <option value = "sunday">Sunday</option>
+                                    <option value = "monday">Monday</option>
+                                    <option value = "tuesday">Tuesday</option>
+                                    <option value = "wednesday">Wednesday</option>
+                                    <option value = "thursday">Thursday</option>
+                                    <option value = "friday">Friday</option>
+                                    <option value = "saturday">Saturday</option>
+                                </select>
+    
+                                <select name = "hours">
+                                    <option value = "hour__select">Select Time</option>
+                                    <option value = "10">10:00 am</option>
+                                    <option value = "10">11:00 am</option>
+                                    <option value = "10">12:00 am</option>
+                                    <option value = "10">1:00 pm</option>
+                                    <option value = "10">2:00 pm</option>
+                                    <option value = "10">3:00 pm</option>
+                                    <option value = "10">4:00 pm</option>
+                                    <option value = "10">5:00 pm</option>
+                                    <option value = "10">6:00 pm</option>
+                                    <option value = "10">7:00 pm</option>
+                                    <option value = "10">8:00 pm</option>
+                                    <option value = "10">9:00 pm</option>
+                                    <option value = "10">10:00 pm</option>
+                                </select>
+                            </div>
+    
+                            <div class = "form__row">
+                                <input type = "text" placeholder="Full Name">
+                                <input type = "text" placeholder="Phone Number">
+                            </div>
+    
+                            <div class = "form__row">
+                                <input type = "number" placeholder="Party Size" min = "1">
+                                <input type = "submit" value = "BOOK TABLE">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
         </div>
     </div>
-    <!-- Main content section -->
-    <div class="reservation__box">
-        <div class="reservation__title">
-        <p>Reserve your table today! Whether you’re planning a romantic dinner or a large group gathering, we look forward to hosting you.</p>
-        </div>
-    </div>
-
+<br>
     <!-- Footer with hours of operation and ownership info -->
     <div class="footer">
         <div class="footer__container">
@@ -65,6 +106,7 @@
                 <div class="location__content">
                     <div class="location__address">
                         <p>123 Cherry Blossom Lane<br>Chesapeake, VA 23320</p>
+                        <p>777-77-7777</p>
                     </div>
                 </div>
             </div>
