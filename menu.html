@@ -2,8 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+
 </head>
 <body>
 
@@ -43,14 +46,73 @@
         </div>
     </nav>
 
-    <!-- Main content section -->
-    <div class="page__title">
-        <p>Explore our carefully curated menu featuring prime cuts of beef, fresh seafood, and seasonal specials. 
-            Whether you prefer a classic steak or an adventurous dish, there’s something for everyone.</p>
-    </div>
-    <div class="main__content">
-        <p>Under Construction</p>
-    </div>
+    <section class="menu">
+        <h1 class="menu__title">A Taste of Excellence</h1>
+
+        <!-- Appetizers -->
+        <div class="menu__section">
+            <div class="menu__columns">
+                <div class="menu__column-text">
+                    <h2>Appetizers</h2>
+                    <p><strong>Buffalo Wings</strong> – $12 <br> Crispy wings tossed in your choice of sauce: spicy buffalo, BBQ, or garlic parmesan.</p>
+                    <p><strong>Calamari</strong> – $14 <br> Lightly breaded and fried, served with a side of marinara sauce.</p>
+                    <p><strong>House Salad</strong> – $8 <br> Fresh greens, cherry tomatoes, cucumbers, and your choice of dressing.</p>
+                    <p><strong>Bruschetta</strong> – $10 <br> Toasted baguette topped with fresh tomatoes, garlic, and basil.</p>
+                </div>
+                <div class="menu__column-image">
+                    <img src="images/lump-crab-cakes.png" alt="Appetizers" class="menu__image">
+                </div>
+            </div>
+        </div>
+
+        <!-- From the Farm -->
+        <div class="menu__section">
+            <div class="menu__columns">
+                <div class="menu__column-image">
+                    <img src="images/lump-crab-cakes.png" alt="From the Farm" class="menu__image">
+                </div>
+                <div class="menu__column-text">
+                    <h2>From the Farm</h2>
+                    <p><strong>Grilled Ribeye Steak</strong> – $28 <br> A juicy 12 oz. ribeye, cooked to perfection, served with mashed potatoes and seasonal veggies.</p>
+                    <p><strong>BBQ Baby Back Ribs</strong> – $24 <br> Slow-cooked, fall-off-the-bone ribs, glazed with our house BBQ sauce.</p>
+                    <p><strong>Grilled Chicken Breast</strong> – $18 <br> Marinated and grilled, served with roasted vegetables and a side of rice pilaf.</p>
+                    <p><strong>Vegetable Stir-fry</strong> – $15 <br> A medley of fresh veggies tossed in a savory soy-garlic sauce, served with rice.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- From the Sea -->
+        <div class="menu__section">
+            <div class="menu__columns">
+                <div class="menu__column-text">
+                    <h2>From the Sea</h2>
+                    <p><strong>Grilled Salmon</strong> – $22 <br> Fresh Atlantic salmon, grilled and served with lemon butter sauce and steamed vegetables.</p>
+                    <p><strong>Lobster Tail</strong> – $30 <br> Succulent lobster tail, grilled to perfection, served with garlic butter and rice.</p>
+                    <p><strong>Shrimp Scampi</strong> – $20 <br> Sautéed shrimp in a garlic butter sauce, served over linguine.</p>
+                    <p><strong>Fish & Chips</strong> – $16 <br> Crispy battered fish, served with fries and tartar sauce.</p>
+                </div>
+                <div class="menu__column-image">
+                    <img src="images/lump-crab-cakes.png" alt="From the Sea" class="menu__image">
+                </div>
+            </div>
+        </div>
+
+        <!-- Desserts -->
+        <div class="menu__section">
+            <div class="menu__columns">
+                <div class="menu__column-image">
+                    <img src="images/lump-crab-cakes.png" alt="Desserts" class="menu__image">
+                </div>
+                <div class="menu__column-text">
+                    <h2>Desserts</h2>
+                    <p><strong>Chocolate Lava Cake</strong> – $8 <br> Rich chocolate cake with a molten center, served with vanilla ice cream.</p>
+                    <p><strong>Cheesecake</strong> – $7 <br> Classic New York-style cheesecake with a graham cracker crust.</p>
+                    <p><strong>Apple Pie</strong> – $6 <br> Warm apple pie served with a scoop of vanilla ice cream.</p>
+                    <p><strong>Tiramisu</strong> – $7 <br> Layers of coffee-soaked ladyfingers and mascarpone cream, dusted with cocoa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer with hours of operation and ownership info -->
     <div class="footer">
@@ -60,7 +122,8 @@
                 <h2 class="location__header">Location</h2>
                 <div class="location__content">
                     <div class="location__address">
-                        <p>123 Cherry Blossom Lane<br>Chesapeake, VA 23320</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Cherry Blossom Lane, Chesapeake, VA 23320</p>
+                        <p><i class="fas fa-phone-alt"></i> 777-77-7777</p>
                     </div>
                 </div>
             </div>
@@ -68,15 +131,9 @@
             <!-- Hours column -->
             <div class="footer__column">
                 <h2 class="hours__title">Hours</h2>
-                <ul class="hours__list">
-                    <li><strong>Monday:</strong> 10:00AM - 11:00PM</li>
-                    <li><strong>Tuesday:</strong> 10:00AM - 11:00PM</li>
-                    <li><strong>Wednesday:</strong> 10:00AM - 11:00PM</li>
-                    <li><strong>Thursday:</strong> 10:00AM - 11:00PM</li>
-                    <li><strong>Friday:</strong> 10:00AM - 11:00PM</li>
-                    <li><strong>Saturday:</strong> 10:00AM - 11:00PM</li>
-                    <li><strong>Sunday:</strong> 10:00AM - 11:00PM</li>
-                </ul>
+                <div class="hours__list">
+                    <p><i class="far fa-clock"></i>Monday - Sunday <br> 10:00am - 11:00pm</p>
+                </div>
             </div>
     
             <!-- Newsletter column -->
@@ -86,8 +143,20 @@
                     <input type="email" placeholder="Your email">
                     <input type="submit" value="Subscribe">
                 </form>
+                <p>Stay updated with our latest news and promotions!</p>
+            </div>
+    
+            <!-- Social Media column -->
+            <div class="footer__column">
+                <h2>Follow Us!</h2>
+                <div class="social__icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
             </div>
         </div>
+        <p>&copy; 2024 Ian's Chophouse. All rights reserved.</p>
     </div>
 </body>
 </html>
