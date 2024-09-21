@@ -167,13 +167,13 @@ body {
 }
 
 .footer__column h2 {
-    font-size: 20px;
+    font-size: 26px;
     font-family: "CrimsonText-SemiBold", serif;
     margin-bottom: 10px;
 }
 
 .footer__column p, .footer__column li {
-    font-size: 14px;
+    font-size: 16px;
     font-family: 'OpenSans-Regular', sans-serif;
     margin-bottom: 10px;
     color: #ccc;
@@ -214,7 +214,7 @@ body {
 }
 
 .footer p {
-    font-size: 12px;
+    font-size: 16px;
     color: #ccc;
 }
 
@@ -414,22 +414,23 @@ form input[type = submit]:hover{
 
 .careers__intro h1 {
     font-family: 'CrimsonText-SemiBold', serif;
-    font-size: 2.5rem;
+    font-size: 40px;
     color: #921010;
     text-align: center;
     margin-bottom: 20px;
 }
 
 .careers__intro p, .careers__intro ul {
-    font-size: 1.1rem;
+    font-size: 20px;
     line-height: 1.6;
     margin-bottom: 20px;
     color: #333;
     text-align: center;
+    font-family: 'OpenSans-Regular', sans-serif;
 }
 
 .careers__intro h2 {
-    font-size: 1.8rem;
+    font-size: 32px;
     color: #921010;
     margin-bottom: 15px;
     text-align: center;
@@ -456,7 +457,7 @@ form input[type = submit]:hover{
 }
 
 .careers__form label {
-    font-size: 1.1rem;
+    font-size: 20px;
     margin-bottom: 5px;
     color: #333;
 }
