@@ -237,6 +237,11 @@ body {
     margin-top: 10px;
 }
 
+.location__address i, .hours__list i {
+    margin-right: 8px;
+    color: #921010;
+}
+
 /* Reservation section styling */
 .reservation__img {
     position: relative;
