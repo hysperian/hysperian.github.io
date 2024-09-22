@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery</title>
+    <!-- External Stylesheets -->
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Navbar section -->
+    <!-- Navbar Section -->
     <nav class="navbar">
         <div class="navbar__container">
-            <!-- Left part of the menu -->
+            <!-- Left Menu Links -->
             <ul class="navbar__menu">
                 <li class="navbar__item">
                     <a href="about_us.html" class="navbar__links">ABOUT US</a>
@@ -25,12 +27,12 @@
                 </li>
             </ul>
         
-            <!-- Logo in the center -->
+            <!-- Center Logo -->
             <a href="index.html" id="navbar__logo">
                 <img src="images/logo.png" alt="Logo" class="navbar__logo-image">
             </a>
         
-            <!-- Right part of the menu -->
+            <!-- Right Menu Links -->
             <ul class="navbar__menu">
                 <li class="navbar__item">
                     <a href="gallery.html" class="navbar__links">GALLERY</a>
@@ -45,26 +47,26 @@
         </div>
     </nav>
 
-    <!-- Main content section -->
-    <div class="page__title">
-        <p>Take a peek into our restaurant’s atmosphere and our chef’s finest creations. From perfectly grilled steaks to decadent desserts, here's what awaits you.</p>
-    </div>
+    <!-- Gallery Header Section -->
+    <section class="gallery__header">
+        <h1>Take a peek into our restaurant’s atmosphere and our chef’s finest creations. From perfectly grilled steaks to decadent desserts, here's what awaits you.</h1>
+    </section>
 
-    <!-- Footer with hours of operation and ownership info -->
-    <div class="footer">
+    <!-- Footer Section -->
+    <footer class="footer">
         <div class="footer__container">
-            <!-- Location column -->
+            <!-- Location Column -->
             <div class="footer__column">
                 <h2 class="location__header">Location</h2>
                 <div class="location__content">
                     <div class="location__address">
                         <p><i class="fas fa-map-marker-alt"></i> 123 Cherry Blossom Lane, Chesapeake, VA 23320</p>
-                        <p><i class="fas fa-phone-alt"></i> 777-77-7777</p>
+                        <p><i class="fas fa-phone-alt"></i> (777) - 777 - 7777</p>
                     </div>
                 </div>
             </div>
     
-            <!-- Hours column -->
+            <!-- Hours Column -->
             <div class="footer__column">
                 <h2 class="hours__title">Hours</h2>
                 <div class="hours__list">
@@ -72,7 +74,7 @@
                 </div>
             </div>
     
-            <!-- Newsletter column -->
+            <!-- Newsletter Subscription Column -->
             <div class="footer__column">
                 <h2 class="subscribe__title">Subscribe to our newsletter</h2>
                 <form>
@@ -82,7 +84,7 @@
                 <p>Stay updated with our latest news and promotions!</p>
             </div>
     
-            <!-- Social Media column -->
+            <!-- Social Media Links -->
             <div class="footer__column">
                 <h2>Follow Us!</h2>
                 <div class="social__icons">
@@ -93,6 +95,6 @@
             </div>
         </div>
         <p>&copy; 2024 Ian's Chophouse. All rights reserved.</p>
-    </div>
+    </footer>
 </body>
 </html>

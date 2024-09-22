@@ -7,9 +7,10 @@
     box-sizing: border-box;
 }
 
+/* Font-face declarations for custom fonts */
 @font-face {
-    font-family: 'FuturaCyrillicLight';
-    src: url('/fonts/FuturaCyrillicLight.ttf') format('truetype');
+    font-family: 'FuturaCyrillicMedium';
+    src: url('/fonts/FuturaCyrillicMedium.ttf') format('truetype');
 }
 
 @font-face {
@@ -27,6 +28,7 @@
     src: url('/fonts/OpenSans-Light.ttf') format('truetype');
 }
 
+/* Set full height and width for html and body, and use flexbox layout */
 html, body {
     height: 100%;
     width: 100%;
@@ -35,6 +37,7 @@ html, body {
     flex-direction: column;
 }
 
+/* Main body layout */
 body {
     flex: 1;
     display: flex;
@@ -42,6 +45,7 @@ body {
     justify-content: space-between;
 }
 
+/* Navbar styles */
 .navbar {
     width: 100%;
     height: 95px;
@@ -52,7 +56,7 @@ body {
     position: fixed;
     top: 0;
     z-index: 1000;
-    border-bottom: 1px solid #555;
+    border-bottom: 1px solid #555555;
 }
 
 .navbar__container {
@@ -73,6 +77,7 @@ body {
     height: auto;
 }
 
+/* Navbar menu styles */
 .navbar__menu {
     display: flex;
     justify-content: center;
@@ -80,16 +85,17 @@ body {
 }
 
 .navbar__item {
-    margin-left: 40px;
+    margin: 40px;
 }
 
+/* Navbar links */
 .navbar__links {
     color: rgb(0, 0, 0);
-    font-size: 17px;
-    font-family: 'OpenSans-Light', sans-serif;
-    font-weight: 500;
+    font-size: 18px;
+    font-family: 'FuturaCyrillicMedium', sans-serif;
 }
 
+/* Hero section styling */
 .hero {
     position: relative;
     display: flex;
@@ -99,9 +105,10 @@ body {
     align-items: center;
     margin-bottom: 26px;
     margin-top: 95px;
-    border-bottom: 1px solid #555;
+    border-bottom: 1px solid #555555;
 }
 
+/* Hero image and logo styles */
 .hero__image {
     height: 100%;
     width: 100%;
@@ -116,6 +123,7 @@ body {
     filter: brightness(0) invert(1);
 }
 
+/* Intro section styles */
 .home__intro {
     color: white;
     justify-content: center;
@@ -132,6 +140,7 @@ body {
     margin: 0 auto;
 }
 
+/* Title and body text styles for intro section */
 .intro__title {
     font-size: 40px;
     font-family: "CrimsonText-SemiBold", serif;
@@ -144,13 +153,12 @@ body {
     margin-bottom: 30px;
 }
 
+/* Footer section styles */
 .footer {
     width: 100%;
     color: white;
-    background: linear-gradient(1deg, rgba(43, 6, 6, 0.671), rgb(31, 31, 31));
     padding: 10px 0;
     text-align: center;
-    border-top: 1px solid #555;
 }
 
 .footer__container {
@@ -159,13 +167,20 @@ body {
     max-width: 1100px;
     margin: 0 auto;
     padding: 10px;
+    border-top: 1px solid #555555;
+    border-bottom: 1px solid #555555;
 }
 
+/* Footer columns layout */
 .footer__column {
     flex: 1;
-    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
+/* Footer column titles */
 .footer__column h2 {
     font-size: 26px;
     font-family: "CrimsonText-SemiBold", serif;
@@ -179,6 +194,7 @@ body {
     color: #ccc;
 }
 
+/* Form in footer */
 .footer__column form {
     display: flex;
     flex-direction: column;
@@ -186,9 +202,9 @@ body {
 }
 
 .footer__column input[type="email"] {
-    width: 90%;
+    width: 275px;
     height: 30px;
-    border: 1px solid #555;
+    border: 1px solid #555555;
     border-radius: 4px;
     background-color: #333;
     color: white;
@@ -197,7 +213,7 @@ body {
 }
 
 .footer__column input[type="submit"] {
-    width: 90%;
+    width: 100%;
     height: 30px;
     border: none;
     background-color: #921010;
@@ -205,8 +221,10 @@ body {
     cursor: pointer;
     margin-top: 10px;
     padding: 0;
+    margin-bottom: 0;
 }
 
+/* Social media icon styles */
 .social__icons a {
     margin: 0 10px;
     color: #921010;
@@ -216,20 +234,17 @@ body {
 .footer p {
     font-size: 16px;
     color: #ccc;
+    margin-top: 10px;
 }
 
-.location__address i, .hours__list i {
-    margin-right: 8px;
-    color: #921010;
-}
-
+/* Reservation section styling */
 .reservation__img {
     position: relative;
     display: flex;
     min-height: 1000px;
     width: 100%;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
 }
 
 .reservation__image {
@@ -248,7 +263,8 @@ body {
     text-align: center;
 }
 
-.banner{
+/* Banner section */
+.banner {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -260,81 +276,98 @@ body {
 .banner p {
     margin: 20px;
 }
-.card__container{
+
+/* Card container for reservations */
+.card__container {
     display: flex;
 }
 
-.banner h2{
+/* Card content styles */
+.banner h2 {
     padding-bottom: 40px;
     margin-bottom: 20px;
 }
-.card__content{
+
+.card__content {
     background: #000000c9;
-    height: 280px;
+    height: 600px;
+    width: 800px;
     border-radius: 3px;
 }
-.card__content h3{
+
+.card__content h3 {
     text-align: center;
     color: #ffffff;
     padding: 25px 0 10px 0;
     font-size: 26px;
     font-weight: 500;
 }
-.form__row{
+
+/* Map styling */
+.mymap {
+    filter: grayscale(100%) invert(95%);
+    margin: 0 auto;
+}
+
+/* Form row styling */
+.form__row {
     display: flex;
     width: 90%;
     margin: 0 auto;
 }
-form select, form input{
+
+form select, form input {
     display: block;
     width: 100%;
     margin: 15px 12px;
     padding: 5px;
     font-size: 15px;
-    font-family: 'Poppins', sans-serif;
-    outline: none;
-    border: none;
-    border-bottom: 1px solid #eee;
+    font-family: 'OpenSans-Regular', sans-serif;
     font-weight: 300;
 }
-form input[type = text], form input[type = number], form input::placeholder, select{
+
+/* Input and form styles */
+form input[type=text], form input[type=number], form input::placeholder, select {
     color: #9a9a9a;
 }
 
-form input[type = submit]{
+form input[type=submit] {
     color: #fff;
-    background: #525252;
+    background: #921010;
     padding: 12px 0;
-    border-radius: 3px;
-    border-color: #525252;
+    border: none;
     cursor: pointer;
 }
 
-form input[type = submit]:hover{
+/* Button hover effect */
+form input[type=submit]:hover {
     opacity: 0.9;
 }
 
+/* Menu section styling */
 .menu {
-    max-width: 1000px;
+    max-width: 80%;
     margin: 125px auto 25px auto;
-    color: rgb(0, 0, 0);
+    color: #000000;
     text-align: center;
     background-color: whitesmoke;
     border-radius: 3px;
 }
 
+/* Menu title */
 .menu__title {
     font-size: 36px;
     margin: 20px;
     font-family: "CrimsonText-SemiBold", serif;
 }
 
+/* Menu sections with border */
 .menu__section {
     margin-bottom: 60px;
-    border-top: 1px solid #555;
-    bord
+    border-top: 1px solid #555555;
 }
 
+/* Menu columns */
 .menu__columns {
     display: flex;
     justify-content: space-between;
@@ -346,32 +379,36 @@ form input[type = submit]:hover{
     padding: 20px;
 }
 
+/* Paragraph and heading styles for menu */
 .menu__column-text p {
     margin-bottom: 20px;
+    font-size: 20px;
 }
 
 .menu__column-text h2 {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    font-size: 30px;
 }
 
+/* Menu images */
 .menu__image {
     width: 100%;
     max-width: 400px;
     height: auto;
     border-radius: 8px;
-    object-fit
 }
 
+/* About section styling */
 .about {
     max-width: 1200px;
     margin: 125px auto 25px auto;
     padding: 50px 20px;
     background-color: whitesmoke;
-    color: #333;
     font-family: 'OpenSans-Regular', sans-serif;
     border-radius: 4px;
 }
 
+/* About title styling */
 .about__title {
     font-family: 'CrimsonText-SemiBold', serif;
     font-size: 48px;
@@ -380,6 +417,7 @@ form input[type = submit]:hover{
     color: #921010;
 }
 
+/* Intro and subtitle styles */
 .about__intro {
     font-size: 19px;
     line-height: 1.6;
@@ -391,12 +429,13 @@ form input[type = submit]:hover{
 
 .about__subtitle {
     font-size: 32px;
-    color: #555;
+    color: #555555;
     margin-bottom: 20px;
     font-family: 'CrimsonText-SemiBold', serif;
     text-align: center;
 }
 
+/* Content sections for about page */
 .about__story, .about__mission, .about__team {
     margin-bottom: 40px;
     text-align: left;
@@ -404,6 +443,7 @@ form input[type = submit]:hover{
     margin: 0 auto;
 }
 
+/* Careers section styling */
 .careers {
     max-width: 1200px;
     margin: 125px auto 25px auto;
@@ -412,6 +452,7 @@ form input[type = submit]:hover{
     border-radius: 3px;
 }
 
+/* Careers title and intro styles */
 .careers__intro h1 {
     font-family: 'CrimsonText-SemiBold', serif;
     font-size: 40px;
@@ -424,11 +465,12 @@ form input[type = submit]:hover{
     font-size: 20px;
     line-height: 1.6;
     margin-bottom: 20px;
-    color: #333;
+    color: #333333;
     text-align: center;
     font-family: 'OpenSans-Regular', sans-serif;
 }
 
+/* Subtitles and lists for careers */
 .careers__intro h2 {
     font-size: 32px;
     color: #921010;
@@ -445,6 +487,7 @@ form input[type = submit]:hover{
     margin-bottom: 10px;
 }
 
+/* Careers form container */
 .careers__form {
     max-width: 600px;
     margin: 0 auto;
@@ -456,16 +499,17 @@ form input[type = submit]:hover{
     flex-direction: column;
 }
 
+/* Careers form input styles */
 .careers__form label {
     font-size: 20px;
     margin-bottom: 5px;
-    color: #333;
+    color: #333333;
 }
 
 .careers__form input[type="text"], .careers__form input[type="email"] {
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #ccc;
+    border: 1px solid #cccccc;
     border-radius: 3px;
     font-size: 1rem;
 }
@@ -478,4 +522,112 @@ form input[type = submit]:hover{
     border: none;
     border-radius: 3px;
     cursor: pointer;
+}
+
+/* Contact section */
+.contact {
+    max-width: 1200px;
+    margin: 125px auto 25px auto;
+    padding: 20px;
+    background-color: whitesmoke;
+    border-radius: 3px;
+}
+
+/* Contact title and intro */
+.contact__intro h1 {
+    font-family: 'CrimsonText-SemiBold', serif;
+    font-size: 40px;
+    color: #921010;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact__intro p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+    font-family: 'OpenSans-Regular', sans-serif;
+}
+
+/* Contact details section */
+.contact__details h2 {
+    font-size: 32px;
+    color: #921010;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.contact__details p, .contact__details ul {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #333;
+    text-align: center;
+    font-family: 'OpenSans-Regular', sans-serif;
+}
+
+/* Contact form container */
+.contact__form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.contact__form h2 {
+    font-size: 32px;
+    color: #921010;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Form structure and labels */
+.contact__form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact__form label {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Contact form inputs */
+.contact__form input[type="text"], .contact__form input[type="email"], .contact__form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact__form input[type="submit"] {
+    padding: 15px;
+    font-size: 18px;
+    background-color: #921010;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Submit button hover effect */
+.contact__form input[type="submit"]:hover {
+    background-color: #750808;
+}
+
+/* Gallery header section */
+.gallery__header {
+    text-align: center;
+    margin-top: 120px; /* Adjust if needed to ensure space below the navbar */
+    color: white;
+    font-family: 'CrimsonText-SemiBold', serif;
+    padding: 20px;
+}
+
+.gallery__header h1 {
+    font-size: 36px;
+    line-height: 1.4;
+    max-width: 80%;
+    margin: 0 auto;
 }

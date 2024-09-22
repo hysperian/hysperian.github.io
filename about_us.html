@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Navbar section -->
+    <!-- Navigation bar -->
     <nav class="navbar">
         <div class="navbar__container">
-            <!-- Left part of the menu -->
             <ul class="navbar__menu">
                 <li class="navbar__item">
                     <a href="about_us.html" class="navbar__links">ABOUT US</a>
@@ -24,13 +24,12 @@
                     <a href="reservations.html" class="navbar__links">RESERVATIONS</a>
                 </li>
             </ul>
-        
-            <!-- Logo in the center -->
+
+            <!-- Logo centered -->
             <a href="index.html" id="navbar__logo">
                 <img src="images/logo.png" alt="Logo" class="navbar__logo-image">
             </a>
-        
-            <!-- Right part of the menu -->
+
             <ul class="navbar__menu">
                 <li class="navbar__item">
                     <a href="gallery.html" class="navbar__links">GALLERY</a>
@@ -45,62 +44,69 @@
         </div>
     </nav>
 
-    <!-- Main content section -->
+    <!-- Main content -->
     <section class="about">
         <div class="about__container">
             <h1 class="about__title">Welcome to Ian's Chophouse</h1>
-            <p class="about__intro">Welcome to Ian’s Chophouse At Ian’s Chophouse, we bring a modern 
-                twist to timeless flavors, where every meal is a celebration of taste and craftsmanship. 
-                Whether you're savoring our signature cuts or indulging in seasonal dishes, we promise 
-                an unforgettable dining experience.</p>
+            <p class="about__intro">
+                Welcome to Ian’s Chophouse. At Ian’s Chophouse, we bring a modern twist to timeless flavors,
+                where every meal is a celebration of taste and craftsmanship. Whether you're savoring our
+                signature cuts or indulging in seasonal dishes, we promise an unforgettable dining experience.
+            </p>
         </div>
 
+        <!-- Our Story Section -->
         <div class="about__story">
             <h2 class="about__subtitle">Our Story</h2>
-            <p>Founded in 2024, Ian’s Chophouse started with a simple vision: to offer exceptional cuisine 
-                that combines the finest ingredients with a warm, welcoming atmosphere. Inspired by the rich 
-                traditions of steakhouses and driven by a passion for culinary excellence, our team has 
-                crafted a menu that celebrates bold flavors and quality produce.</p>
+            <p>
+                Founded in 2024, Ian’s Chophouse started with a simple vision: to offer exceptional cuisine that 
+                combines the finest ingredients with a warm, welcoming atmosphere. Inspired by the rich traditions 
+                of steakhouses and driven by a passion for culinary excellence, our team has crafted a menu that 
+                celebrates bold flavors and quality produce.
+            </p>
         </div>
 
+        <!-- Our Mission Section -->
         <div class="about__mission">
             <h2 class="about__subtitle">Our Mission</h2>
-            <p>At Ian’s Chophouse, we believe in the power of food to bring people together. Our mission 
-                is to create not just meals but memorable moments, where every bite reflects our dedication 
-                to quality, flavor, and hospitality.</p>
+            <p>
+                At Ian’s Chophouse, we believe in the power of food to bring people together. Our mission is to 
+                create not just meals but memorable moments, where every bite reflects our dedication to quality, 
+                flavor, and hospitality.
+            </p>
         </div>
 
+        <!-- Meet the Team Section -->
         <div class="about__team">
             <h2 class="about__subtitle">Meet Our Team</h2>
-            <p>Behind every dish is a team of passionate professionals, led by our head chef, Ian Thompson. 
-                With years of experience and a dedication to using the best ingredients, our team is committed 
-                to creating a dining experience that leaves a lasting impression.</p>
+            <p>
+                Behind every dish is a team of passionate professionals, led by our head chef, Ian Thompson. With 
+                years of experience and a dedication to using the best ingredients, our team is committed to 
+                creating a dining experience that leaves a lasting impression.
+            </p>
         </div>
     </section>
 
-    <!-- Footer with hours of operation and ownership info -->
-    <div class="footer">
+    <!-- Footer -->
+    <footer class="footer">
         <div class="footer__container">
-            <!-- Location column -->
             <div class="footer__column">
                 <h2 class="location__header">Location</h2>
                 <div class="location__content">
                     <div class="location__address">
                         <p><i class="fas fa-map-marker-alt"></i> 123 Cherry Blossom Lane, Chesapeake, VA 23320</p>
-                        <p><i class="fas fa-phone-alt"></i> 777-77-7777</p>
+                        <p><i class="fas fa-phone-alt"></i> (777) - 777 - 7777</p>
                     </div>
                 </div>
             </div>
-    
-            <!-- Hours column -->
+
             <div class="footer__column">
                 <h2 class="hours__title">Hours</h2>
                 <div class="hours__list">
-                    <p><i class="far fa-clock"></i>Monday - Sunday <br> 10:00am - 11:00pm</p>
+                    <p><i class="far fa-clock"></i> Monday - Sunday <br> 10:00am - 11:00pm</p>
                 </div>
             </div>
-    
-            <!-- Newsletter column -->
+
             <div class="footer__column">
                 <h2 class="subscribe__title">Subscribe to our newsletter</h2>
                 <form>
@@ -109,8 +115,7 @@
                 </form>
                 <p>Stay updated with our latest news and promotions!</p>
             </div>
-    
-            <!-- Social Media column -->
+
             <div class="footer__column">
                 <h2>Follow Us!</h2>
                 <div class="social__icons">
@@ -121,6 +126,6 @@
             </div>
         </div>
         <p>&copy; 2024 Ian's Chophouse. All rights reserved.</p>
-    </div>
+    </footer>
 </body>
 </html>

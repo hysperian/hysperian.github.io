@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <title>Reservations</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- External Stylesheets -->
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Navbar section -->
+    <!-- Navbar Section -->
     <nav class="navbar">
         <div class="navbar__container">
-            <!-- Left part of the menu -->
+            <!-- Left Menu Links -->
             <ul class="navbar__menu">
                 <li class="navbar__item">
                     <a href="about_us.html" class="navbar__links">ABOUT US</a>
@@ -25,12 +27,12 @@
                 </li>
             </ul>
         
-            <!-- Logo in the center -->
+            <!-- Center Logo -->
             <a href="index.html" id="navbar__logo">
                 <img src="images/logo.png" alt="Logo" class="navbar__logo-image">
             </a>
         
-            <!-- Right part of the menu -->
+            <!-- Right Menu Links -->
             <ul class="navbar__menu">
                 <li class="navbar__item">
                     <a href="gallery.html" class="navbar__links">GALLERY</a>
@@ -45,74 +47,80 @@
         </div>
     </nav>
 
+    <!-- Reservation Section -->
     <div class="reservation__img">
         <img src="images/reservations.jpg" alt="Reservation Image" class="reservation__image">
         <div class="reservation__main">
-            <section class = "banner">
+            <section class="banner">
                 <p>Call Or Book a Table Online</p>
-                    <div class = "card__content">
-                        <h3>Reservations</h3>
-                        <form>
-                            <div class = "form__row">
-                                <select name = "days">
-                                    <option value = "day-select">Select Day</option>
-                                    <option value = "sunday">Sunday</option>
-                                    <option value = "monday">Monday</option>
-                                    <option value = "tuesday">Tuesday</option>
-                                    <option value = "wednesday">Wednesday</option>
-                                    <option value = "thursday">Thursday</option>
-                                    <option value = "friday">Friday</option>
-                                    <option value = "saturday">Saturday</option>
-                                </select>
-    
-                                <select name = "hours">
-                                    <option value = "hour__select">Select Time</option>
-                                    <option value = "10">10:00 am</option>
-                                    <option value = "10">11:00 am</option>
-                                    <option value = "10">12:00 am</option>
-                                    <option value = "10">1:00 pm</option>
-                                    <option value = "10">2:00 pm</option>
-                                    <option value = "10">3:00 pm</option>
-                                    <option value = "10">4:00 pm</option>
-                                    <option value = "10">5:00 pm</option>
-                                    <option value = "10">6:00 pm</option>
-                                    <option value = "10">7:00 pm</option>
-                                    <option value = "10">8:00 pm</option>
-                                    <option value = "10">9:00 pm</option>
-                                    <option value = "10">10:00 pm</option>
-                                </select>
-                            </div>
-    
-                            <div class = "form__row">
-                                <input type = "text" placeholder="Full Name">
-                                <input type = "text" placeholder="Phone Number">
-                            </div>
-    
-                            <div class = "form__row">
-                                <input type = "number" placeholder="Party Size" min = "1">
-                                <input type = "submit" value = "BOOK TABLE">
-                            </div>
-                        </form>
-                    </div>
+                <div class="card__content">
+                    <h3>Reservations</h3>
+                    <form>
+                        <!-- Date and Time Selection -->
+                        <div class="form__row">
+                            <select name="days">
+                                <option value="day-select">Select Day</option>
+                                <option value="sunday">Sunday</option>
+                                <option value="monday">Monday</option>
+                                <option value="tuesday">Tuesday</option>
+                                <option value="wednesday">Wednesday</option>
+                                <option value="thursday">Thursday</option>
+                                <option value="friday">Friday</option>
+                                <option value="saturday">Saturday</option>
+                            </select>
+
+                            <select name="hours">
+                                <option value="hour__select">Select Time</option>
+                                <option value="10">10:00 am</option>
+                                <option value="11">11:00 am</option>
+                                <option value="12">12:00 pm</option>
+                                <option value="1">1:00 pm</option>
+                                <option value="2">2:00 pm</option>
+                                <option value="3">3:00 pm</option>
+                                <option value="4">4:00 pm</option>
+                                <option value="5">5:00 pm</option>
+                                <option value="6">6:00 pm</option>
+                                <option value="7">7:00 pm</option>
+                                <option value="8">8:00 pm</option>
+                                <option value="9">9:00 pm</option>
+                                <option value="10">10:00 pm</option>
+                            </select>
+                        </div>
+
+                        <!-- User Info and Party Size -->
+                        <div class="form__row">
+                            <input type="text" placeholder="Full Name">
+                            <input type="text" placeholder="Phone Number">
+                        </div>
+
+                        <div class="form__row">
+                            <input type="number" placeholder="Party Size" min="1">
+                            <input type="submit" value="BOOK TABLE">
+                        </div>
+
+                        <!-- Embedded Google Map -->
+                        <iframe class="mymap" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d21497.95508718614!2d-76.23338637619399!3d36.77800016351212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1727037982654!5m2!1sen!2sus" width="700" height="325" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </form>
+                </div>
             </section>
         </div>
     </div>
 
-    <!-- Footer with hours of operation and ownership info -->
-    <div class="footer">
+    <!-- Footer Section -->
+    <footer class="footer">
         <div class="footer__container">
-            <!-- Location column -->
+            <!-- Location Column -->
             <div class="footer__column">
                 <h2 class="location__header">Location</h2>
                 <div class="location__content">
                     <div class="location__address">
                         <p><i class="fas fa-map-marker-alt"></i> 123 Cherry Blossom Lane, Chesapeake, VA 23320</p>
-                        <p><i class="fas fa-phone-alt"></i> 777-77-7777</p>
+                        <p><i class="fas fa-phone-alt"></i> (777) - 777 - 7777</p>
                     </div>
                 </div>
             </div>
     
-            <!-- Hours column -->
+            <!-- Hours Column -->
             <div class="footer__column">
                 <h2 class="hours__title">Hours</h2>
                 <div class="hours__list">
@@ -120,7 +128,7 @@
                 </div>
             </div>
     
-            <!-- Newsletter column -->
+            <!-- Newsletter Subscription Column -->
             <div class="footer__column">
                 <h2 class="subscribe__title">Subscribe to our newsletter</h2>
                 <form>
@@ -130,7 +138,7 @@
                 <p>Stay updated with our latest news and promotions!</p>
             </div>
     
-            <!-- Social Media column -->
+            <!-- Social Media Links Column -->
             <div class="footer__column">
                 <h2>Follow Us!</h2>
                 <div class="social__icons">
@@ -141,6 +149,6 @@
             </div>
         </div>
         <p>&copy; 2024 Ian's Chophouse. All rights reserved.</p>
-    </div>
+    </footer>
 </body>
 </html>
