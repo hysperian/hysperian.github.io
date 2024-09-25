@@ -195,11 +195,16 @@ body {
 
 .modal__container.show__modal {
     display: block;
-  }
+}
 
   .modal__form .form__row {
     width: 500px;
-  }
+}
+
+.form__row {
+    border: black;
+}
+
 
 /* Intro section styles */
 .home__intro {
