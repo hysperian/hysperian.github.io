@@ -123,6 +123,81 @@ body {
     filter: brightness(0) invert(1);
 }
 
+:root {
+    --modal-duration : 1s
+}
+
+.rsv__button {
+    position: absolute;
+    padding: 15px;
+    font-size: 30px;
+    bottom: 25%;
+    border: solid #921010;
+    border-radius: 8px;
+    background-color: #921010;
+    color: white;
+    cursor: pointer;
+    font-family: 'OpenSans-Regular', sans-serif;
+}
+
+.modal__container {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.507)
+}
+
+.modal {
+    position: absolute;
+    background: #ffffff;
+    box-shadow: black;
+    border-radius: 5px;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    width: 500px;
+}
+
+.modal__content {
+    padding: 0px;
+}
+
+.modal__content h1 {
+    display: flex;
+    color: rgb(0, 0, 0);
+    justify-content: center;
+}
+
+.modal__form iframe {
+    display: flex;
+    margin: 0 auto;
+    padding-bottom: 7px;
+}
+
+.close__btn {
+    background: transparent;
+    border: none;
+    font-size: 25px;
+    position: absolute;
+    top: 5px;
+    right: 12px;
+    color: white;
+    cursor: pointer;
+}
+
+.modal__container.show__modal {
+    display: block;
+  }
+
+  .modal__form .form__row {
+    width: 500px;
+  }
+
 /* Intro section styles */
 .home__intro {
     color: white;
@@ -367,16 +442,25 @@ form input[type=submit]:hover {
 }
 
 /* Menu sections with border */
+.hidden {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.show {
+    opacity: 1;
+}
+
 .menu__section {
     margin-bottom: 60px;
     border-top: 1px solid #555555;
 }
 
 /* Menu columns */
-.menu__columns {
+.menu__column {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center;  
 }
 
 .menu__column-text, .menu__column-image {
