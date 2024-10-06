@@ -7,7 +7,7 @@
     <!-- External Stylesheets -->
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
 
@@ -91,6 +91,16 @@
                 <input type="submit" value="Submit Application">
             </form>
         </div>
+
+        <section class="modal__container" id="careerSuccessModal">
+            <section class="modal">
+                <button class="close__btn" id="careerSuccessClose">X</button>
+                <div class="modal__content">
+                    <h1>Application Submitted!</h1>
+                    <p>Thank you for applying. We will review your application and get back to you soon.</p>
+                </div>
+            </section>
+        </section>
     </section>
 
     <!-- Footer Section -->
@@ -118,24 +128,35 @@
             <!-- Newsletter Column -->
             <div class="footer__column">
                 <h2 class="subscribe__title">Subscribe to our newsletter</h2>
-                <form>
-                    <input type="email" placeholder="Your email">
+                <form class="modal__subscribe" id="subscribe__form">
+                    <input type="email" placeholder="Your email" required>
                     <input type="submit" value="Subscribe">
                 </form>
                 <p>Stay updated with our latest news and promotions!</p>
             </div>
+            <section class="modal__container" id="subscribeSuccessModal">
+                <section class="modal">
+                    <button class="close__btn" id="subscribeSuccessClose">X</button>
+                    <div class="modal__content">
+                        <h1>Subscribed!</h1>
+                        <p>Thank you for subscribing to our newsletter.</p>
+                    </div>
+                </section>
+            </section>
     
             <!-- Social Media Column -->
             <div class="footer__column">
                 <h2>Follow Us!</h2>
                 <div class="social__icons">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.x.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
         <p>&copy; 2024 Ian's Chophouse. All rights reserved.</p>
     </footer>
+    <script src="subscribe.js"></script>
+    <script src="careers.js"></script>
 </body>
 </html>

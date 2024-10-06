@@ -7,7 +7,7 @@
     <!-- External Stylesheets -->
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
 
@@ -51,17 +51,17 @@
     <section class="hero">
         <img src="images/hero.jpg" alt="Hero Image" class="hero__image">
         <img src="images/logo.png" alt="Logo" class="hero__logo">
-        <button class="rsv__button" id="open">Book A Reservation Now</button>
+        <button class="rsv__button" id="open">Book A Reservation</button>
         <section class="modal__container" id="modal">
             <section class="modal">
                 <button class="close__btn" id="close">X</button>
                 <div class="modal__content">
                     <h1>Reservations</h1>
-                    <form class="modal__form">
+                    <form class="modal__form" id="reservationForm">
                         <!-- Date and Time Selection -->
                         <div class="form__row">
-                            <select name="days">
-                                <option value="day-select">Select Day</option>
+                            <select name="days" id="daySelect" required>
+                                <option value="">Select Day</option>
                                 <option value="sunday">Sunday</option>
                                 <option value="monday">Monday</option>
                                 <option value="tuesday">Tuesday</option>
@@ -70,9 +70,9 @@
                                 <option value="friday">Friday</option>
                                 <option value="saturday">Saturday</option>
                             </select>
-    
-                            <select name="hours">
-                                <option value="hour__select">Select Time</option>
+
+                            <select name="hours" id="hourSelect" required>
+                                <option value="">Select Time</option>
                                 <option value="10">10:00 am</option>
                                 <option value="11">11:00 am</option>
                                 <option value="12">12:00 pm</option>
@@ -88,21 +88,30 @@
                                 <option value="10">10:00 pm</option>
                             </select>
                         </div>
-    
+
                         <!-- User Info and Party Size -->
                         <div class="form__row">
-                            <input type="text" placeholder="Full Name">
-                            <input type="text" placeholder="Phone Number">
+                            <input type="text" placeholder="Full Name" required>
+                            <input type="text" placeholder="Phone Number" required>
                         </div>
-    
+
                         <div class="form__row">
-                            <input type="number" placeholder="Party Size" min="1">
+                            <input type="number" placeholder="Party Size" min="1" required>
                             <input type="submit" value="BOOK TABLE">
                         </div>
-    
+        
                         <!-- Embedded Google Map -->
                         <iframe class="mymap" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d21497.95508718614!2d-76.23338637619399!3d36.77800016351212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1727037982654!5m2!1sen!2sus" width="485" height="325" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </form>
+                </div>
+            </section>
+        </section>
+        <section class="modal__container" id="successModal">
+            <section class="modal">
+                <button class="close__btn" id="successClose">X</button>
+                <div class="modal__content">
+                    <h1>Success!</h1>
+                    <p>Your reservation has been successfully booked.</p>
                 </div>
             </section>
         </section>
@@ -152,25 +161,36 @@
             <!-- Newsletter Subscription Column -->
             <div class="footer__column">
                 <h2 class="subscribe__title">Subscribe to our newsletter</h2>
-                <form>
-                    <input type="email" placeholder="Your email">
+                <form class="modal__subscribe" id="subscribe__form">
+                    <input type="email" placeholder="Your email" required>
                     <input type="submit" value="Subscribe">
                 </form>
                 <p>Stay updated with our latest news and promotions!</p>
             </div>
+            <section class="modal__container" id="subscribeSuccessModal">
+                <section class="modal">
+                    <button class="close__btn" id="subscribeSuccessClose">X</button>
+                    <div class="modal__content">
+                        <h1>Subscribed!</h1>
+                        <p>Thank you for subscribing to our newsletter.</p>
+                    </div>
+                </section>
+            </section>
     
             <!-- Social Media Column -->
             <div class="footer__column">
                 <h2>Follow Us!</h2>
                 <div class="social__icons">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.x.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
         <p>&copy; 2024 Ian's Chophouse. All rights reserved.</p>
     </footer>
     <script src="index_script.js"></script>
+    <script src="subscribe.js"></script>
+    <script src="rsrv_validate.js"></script>
 </body>
 </html>

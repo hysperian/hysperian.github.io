@@ -1,4 +1,4 @@
-/* Global reset - ensures consistent margins, padding, list styling, and includes box-sizing for predictable layouts */
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -28,7 +28,6 @@
     src: url('/fonts/OpenSans-Light.ttf') format('truetype');
 }
 
-/* Set full height and width for html and body, and use flexbox layout */
 html, body {
     height: 100%;
     width: 100%;
@@ -64,6 +63,8 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
+    max-width: 1200px;
+    padding: 100px 120px;
 }
 
 #navbar__logo {
@@ -85,7 +86,7 @@ body {
 }
 
 .navbar__item {
-    margin: 40px;
+    margin: 0 20px;
 }
 
 /* Navbar links */
@@ -95,7 +96,11 @@ body {
     font-family: 'FuturaCyrillicMedium', sans-serif;
 }
 
-/* Hero section styling */
+.navbar__links:hover {
+    border-bottom: 1px solid black;
+}
+
+/* Hero section styling (original positioning) */
 .hero {
     position: relative;
     display: flex;
@@ -108,7 +113,6 @@ body {
     border-bottom: 1px solid #555555;
 }
 
-/* Hero image and logo styles */
 .hero__image {
     height: 100%;
     width: 100%;
@@ -121,10 +125,6 @@ body {
     width: 400px;
     height: auto;
     filter: brightness(0) invert(1);
-}
-
-:root {
-    --modal-duration : 1s
 }
 
 .rsv__button {
@@ -140,6 +140,12 @@ body {
     font-family: 'OpenSans-Regular', sans-serif;
 }
 
+.rsv__button:hover {
+    background-color: #750808;
+    border-color: #750808;
+}
+
+/* Modal styling */
 .modal__container {
     position: fixed;
     top: 0;
@@ -159,7 +165,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    max-width: 100%;
+    max-width: 90%;
     width: 500px;
 }
 
@@ -189,7 +195,7 @@ body {
     position: absolute;
     top: 5px;
     right: 12px;
-    color: white;
+    color: rgb(0, 0, 0);
     cursor: pointer;
 }
 
@@ -205,6 +211,31 @@ body {
     border: black;
 }
 
+/* Success Modal Styles */
+#successModal .modal {
+    background-color: rgba(31, 31, 31, 0.959);
+    border: 1px solid #921010;
+    border-radius: 10px;
+    text-align: center;
+    padding: 50px;
+}
+
+#successModal .modal__content h1 {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#successModal .modal__content p {
+    color: #ffffff;
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+#successModal .close__btn {
+    color: white;
+}
 
 /* Intro section styles */
 .home__intro {
@@ -213,13 +244,13 @@ body {
     display: flex;
     border: solid white;
     padding: 30px;
-    margin: 0 auto;
+    margin: 0 auto 26px auto;
     max-width: 97%;
     text-align: center;
 }
 
 .intro__content {
-    max-width: 40%;
+    max-width: 80%;
     margin: 0 auto;
 }
 
@@ -231,9 +262,10 @@ body {
 }
 
 .intro__body {
-    font-size: 15px;
+    font-size: 20px;
     font-family: 'OpenSans-Regular', sans-serif;
     margin-bottom: 30px;
+    line-height: 1.5;
 }
 
 /* Footer section styles */
@@ -246,24 +278,25 @@ body {
 
 .footer__container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     max-width: 1100px;
     margin: 0 auto;
     padding: 10px;
-    border-top: 1px solid #555555;
     border-bottom: 1px solid #555555;
+    border-top: 1px solid #555555;
 }
 
 /* Footer columns layout */
 .footer__column {
-    flex: 1;
+    flex: 1 1 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-bottom: 20px;
 }
 
-/* Footer column titles */
 .footer__column h2 {
     font-size: 26px;
     font-family: "CrimsonText-SemiBold", serif;
@@ -277,7 +310,7 @@ body {
     color: #ccc;
 }
 
-/* Form in footer */
+/* Footer form */
 .footer__column form {
     display: flex;
     flex-direction: column;
@@ -324,6 +357,70 @@ body {
     margin-right: 8px;
     color: #921010;
 }
+
+/* Subscription Success Modal specific styling */
+#subscribeSuccessModal .modal {
+    background-color: rgba(31, 31, 31, 0.959);
+    border: 1px solid #921010;
+    border-radius: 10px;
+    text-align: center;
+    padding: 50px;
+}
+
+#subscribeSuccessModal .modal__content h1 {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#subscribeSuccessModal .modal__content p {
+    color: #ffffff;
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+#subscribeSuccessModal .close__btn {
+    background: transparent;
+    border: none;
+    font-size: 25px;
+    position: absolute;
+    top: 5px;
+    right: 12px;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+    .navbar__container {
+        flex-direction: column;
+    }
+
+    .navbar__menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar__item {
+        margin: 10px 0;
+    }
+
+    .home__intro {
+        padding: 20px;
+    }
+
+    .footer__column {
+        flex: 1 1 100%;
+        margin-bottom: 15px;
+    }
+
+    .footer__container {
+        padding: 0 10px;
+    }
+}
+
+
 
 /* Reservation section styling */
 .reservation__img {
@@ -379,7 +476,7 @@ body {
 .card__content {
     background: #000000c9;
     height: 600px;
-    width: 800px;
+    width: 700px;
     border-radius: 3px;
 }
 
@@ -400,7 +497,7 @@ body {
 /* Form row styling */
 .form__row {
     display: flex;
-    width: 90%;
+    width: 97%;
     margin: 0 auto;
 }
 
@@ -433,6 +530,37 @@ form input[type=submit]:hover {
     opacity: 0.9;
 }
 
+#rsvSuccessModal .modal {
+    background-color: rgba(31, 31, 31, 0.959);
+    border: 1px solid #921010;
+    border-radius: 10px;
+    text-align: center;
+    padding: 50px;
+}
+
+#rsvSuccessModal .modal__content h1 {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#rsvSuccessModal .modal__content p {
+    color: #ffffff;
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+#rsvSuccessModal .close__btn {
+    border: none;
+    font-size: 25px;
+    position: absolute;
+    top: 5px;
+    right: 12px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
 /* Menu section styling */
 .menu {
     max-width: 80%;
@@ -445,12 +573,12 @@ form input[type=submit]:hover {
 
 /* Menu title */
 .menu__title {
-    font-size: 36px;
+    font-size: 45px;
     margin: 20px;
     font-family: "CrimsonText-SemiBold", serif;
+    color: #921010;
 }
 
-/* Menu sections with border */
 .hidden {
     opacity: 0;
     transition: opacity 1s ease-in-out;
@@ -461,7 +589,7 @@ form input[type=submit]:hover {
 }
 
 .menu__section {
-    margin-bottom: 60px;
+    margin-bottom: 40px;
     border-top: 1px solid #555555;
 }
 
@@ -474,18 +602,21 @@ form input[type=submit]:hover {
 
 .menu__column-text, .menu__column-image {
     flex: 1;
-    padding: 20px;
+    margin: 40px 0 0 0;
+
 }
 
 /* Paragraph and heading styles for menu */
 .menu__column-text p {
-    margin-bottom: 20px;
+    margin: 20px;
     font-size: 20px;
 }
 
 .menu__column-text h2 {
-    margin-bottom: 30px;
-    font-size: 30px;
+    margin: 0 80px 30px 80px;
+    font-size:37px;
+    border-bottom: 1px solid #555555;
+    padding-bottom: 30px;
 }
 
 /* Menu images */
@@ -500,10 +631,14 @@ form input[type=submit]:hover {
 .about {
     max-width: 1200px;
     margin: 125px auto 25px auto;
-    padding: 50px 20px;
+    padding: 10px 20px;
     background-color: whitesmoke;
     font-family: 'OpenSans-Regular', sans-serif;
     border-radius: 4px;
+}
+
+.about__container {
+    margin-bottom: 20px;
 }
 
 /* About title styling */
@@ -511,7 +646,7 @@ form input[type=submit]:hover {
     font-family: 'CrimsonText-SemiBold', serif;
     font-size: 48px;
     text-align: center;
-    margin-bottom: 20px;
+    margin: 20px auto 20px auto;
     color: #921010;
 }
 
@@ -523,6 +658,7 @@ form input[type=submit]:hover {
     margin-bottom: 40px;
     max-width: 800px;
     margin: 0 auto;
+    font-family: 'OpenSans-Regular', sans-serif;
 }
 
 .about__subtitle {
@@ -536,9 +672,15 @@ form input[type=submit]:hover {
 /* Content sections for about page */
 .about__story, .about__mission, .about__team {
     margin-bottom: 40px;
-    text-align: left;
+    text-align: center;
     max-width: 800px;
-    margin: 0 auto;
+    margin: 20px auto;
+    font-family: 'OpenSans-Regular', sans-serif;
+}
+
+.about__mission p, .about__story p, .about__team p {
+    line-height: 1.6;
+    font-size: 19px;
 }
 
 /* Careers section styling */
@@ -619,6 +761,44 @@ form input[type=submit]:hover {
     color: white;
     border: none;
     border-radius: 3px;
+    cursor: pointer;
+}
+
+#careerSuccessModal .modal {
+    background-color: rgba(31, 31, 31, 0.959);
+    border: 1px solid #921010;
+    border-radius: 10px;
+    text-align: center;
+    padding: 50px;
+}
+
+#careerSuccessModal .modal__content h1 {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#careerSuccessModal .modal__content p {
+    color: #ffffff;
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+#careerSuccessModal .modal__content::before {
+    font-size: 40px;
+    color: #ffffff;
+    display: block;
+}
+
+#careerSuccessModal .close__btn {
+    background: transparent;
+    border: none;
+    font-size: 25px;
+    position: absolute;
+    top: 5px;
+    right: 12px;
+    color: #ffffff;
     cursor: pointer;
 }
 
@@ -712,6 +892,44 @@ form input[type=submit]:hover {
 /* Submit button hover effect */
 .contact__form input[type="submit"]:hover {
     background-color: #750808;
+}
+
+#contactSuccessModal .modal {
+    background-color: rgba(31, 31, 31, 0.959);
+    border: 1px solid #921010;
+    border-radius: 10px;
+    text-align: center;
+    padding: 50px;
+}
+
+#contactSuccessModal .modal__content h1 {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#contactSuccessModal .modal__content p {
+    color: #ffffff;
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+#contactSuccessModal .modal__content::before {
+    font-size: 40px;
+    color: #ffffff;
+    display: block;
+}
+
+#contactSuccessModal .close__btn {
+    background: transparent;
+    border: none;
+    font-size: 25px;
+    position: absolute;
+    top: 5px;
+    right: 12px;
+    color: #ffffff;
+    cursor: pointer;
 }
 
 /* Gallery header section */

@@ -6,7 +6,7 @@
     <title>About Us</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
 
@@ -80,7 +80,7 @@
         <div class="about__team">
             <h2 class="about__subtitle">Meet Our Team</h2>
             <p>
-                Behind every dish is a team of passionate professionals, led by our head chef, Ian Thompson. With 
+                Behind every dish is a team of passionate professionals, led by our head chef, Ian. With 
                 years of experience and a dedication to using the best ingredients, our team is committed to 
                 creating a dining experience that leaves a lasting impression.
             </p>
@@ -90,6 +90,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="footer__container">
+            <!-- Location Column -->
             <div class="footer__column">
                 <h2 class="location__header">Location</h2>
                 <div class="location__content">
@@ -99,33 +100,46 @@
                     </div>
                 </div>
             </div>
-
+    
+            <!-- Hours Column -->
             <div class="footer__column">
                 <h2 class="hours__title">Hours</h2>
                 <div class="hours__list">
-                    <p><i class="far fa-clock"></i> Monday - Sunday <br> 10:00am - 11:00pm</p>
+                    <p><i class="far fa-clock"></i>Monday - Sunday <br> 10:00am - 11:00pm</p>
                 </div>
             </div>
-
+    
+            <!-- Newsletter Subscription Column -->
             <div class="footer__column">
                 <h2 class="subscribe__title">Subscribe to our newsletter</h2>
-                <form>
-                    <input type="email" placeholder="Your email">
+                <form class="modal__subscribe" id="subscribe__form">
+                    <input type="email" placeholder="Your email" required>
                     <input type="submit" value="Subscribe">
                 </form>
                 <p>Stay updated with our latest news and promotions!</p>
             </div>
-
+            <section class="modal__container" id="subscribeSuccessModal">
+                <section class="modal">
+                    <button class="close__btn" id="subscribeSuccessClose">X</button>
+                    <div class="modal__content">
+                        <h1>Subscribed!</h1>
+                        <p>Thank you for subscribing to our newsletter.</p>
+                    </div>
+                </section>
+            </section>
+    
+            <!-- Social Media Links Column -->
             <div class="footer__column">
                 <h2>Follow Us!</h2>
                 <div class="social__icons">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.x.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
         <p>&copy; 2024 Ian's Chophouse. All rights reserved.</p>
     </footer>
+    <script src="subscribe.js"></script>
 </body>
 </html>
