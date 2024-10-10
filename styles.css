@@ -953,7 +953,7 @@ form input[type=submit]:hover {
     flex-wrap: wrap;
     width: 80%;
     justify-content: space-around;
-    margin:0 auto;
+    margin: 0 auto;
 }
 
 .gallery__item {
@@ -969,4 +969,10 @@ form input[type=submit]:hover {
     width: 100%;
     height: auto;
     object-fit: cover;
+    opacity: .9;
+    border-radius: 6px;
+}
+
+.gallery__item img:hover {
+    scale: 106%;
 }
