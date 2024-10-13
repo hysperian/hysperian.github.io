@@ -86,7 +86,7 @@ body {
 }
 
 .navbar__item {
-    margin: 0 20px;
+    margin: 0 15px;
 }
 
 /* Navbar links */
@@ -975,4 +975,9 @@ form input[type=submit]:hover {
 
 .gallery__item img:hover {
     scale: 106%;
+}
+
+.video {
+    margin: 0 auto;
+    margin-top: 100px;
 }
